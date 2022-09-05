@@ -1,0 +1,37 @@
+@import "colors";
+@import "fonts";
+
+.btn-master{
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-family: map-get($fontweights, medium );
+
+  @include media-breakpoint-down(sm){
+    padding: 10px 20px;
+  }
+}
+
+.btn-first{
+  @extend .btn-master;
+
+  background-color: $buttoncolor;
+  color: #ffff;
+  
+  &:hover{
+    background-color: $buttonhover;
+    color: #fff;
+  }
+
+}
+
+.btn-second{
+  @extend .btn-master;
+
+  border: 2px solid $buttoncolor;
+  color: $buttoncolor;
+
+  &:hover{
+    background-color: $buttonhover;
+    color: #fff;
+  }
+}
